@@ -51,6 +51,7 @@
 		1E9364F32A6A91C100CCB09A /* movieBookSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				1E9365052A6A942A00CCB09A /* App */,
 				1E9365042A6A93C700CCB09A /* ViewModal */,
 				1E9365032A6A93BF00CCB09A /* View */,
 				1E9365022A6A927600CCB09A /* Model */,
@@ -89,6 +90,13 @@
 			children = (
 			);
 			path = ViewModal;
+			sourceTree = "<group>";
+		};
+		1E9365052A6A942A00CCB09A /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
