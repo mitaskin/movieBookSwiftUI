@@ -12,6 +12,7 @@
 		1E9364F92A6A91C200CCB09A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E9364F82A6A91C200CCB09A /* Assets.xcassets */; };
 		1E9364FC2A6A91C200CCB09A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E9364FB2A6A91C200CCB09A /* Preview Assets.xcassets */; };
 		1E9365072A6A949900CCB09A /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9365062A6A949900CCB09A /* Film.swift */; };
+		1E93650A2A6A99C100CCB09A /* DownloaderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9365092A6A99C100CCB09A /* DownloaderClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		1E9364F82A6A91C200CCB09A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E9364FB2A6A91C200CCB09A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1E9365062A6A949900CCB09A /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		1E9365092A6A99C100CCB09A /* DownloaderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloaderClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		1E9364F32A6A91C100CCB09A /* movieBookSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				1E9365082A6A991100CCB09A /* Service */,
 				1E9365052A6A942A00CCB09A /* App */,
 				1E9365042A6A93C700CCB09A /* ViewModal */,
 				1E9365032A6A93BF00CCB09A /* View */,
@@ -100,6 +103,14 @@
 				1E9364F42A6A91C100CCB09A /* movieBookSwiftUIApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		1E9365082A6A991100CCB09A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1E9365092A6A99C100CCB09A /* DownloaderClient.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 				1E9364F72A6A91C100CCB09A /* ContentView.swift in Sources */,
 				1E9365072A6A949900CCB09A /* Film.swift in Sources */,
 				1E9364F52A6A91C100CCB09A /* movieBookSwiftUIApp.swift in Sources */,
+				1E93650A2A6A99C100CCB09A /* DownloaderClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
