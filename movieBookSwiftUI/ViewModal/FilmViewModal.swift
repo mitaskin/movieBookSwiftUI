@@ -9,20 +9,22 @@ import Foundation
 
 class FilmListeViewModal: ObservableObject{
     
-    @Published var filmler = [Film]()
+    @Published var filmler = [FilmViewModal]()
     
     let downloaderClient = DownloaderClient()
     
     func filmAramasiYap(filmIsmi:String){
         downloaderClient.filmleriIndir(search: filmIsmi) { sonuc in
             switch sonuc {
-            //filmDizisi Başarılı Dönerse
+                //filmDizisi Başarılı Dönerse
             case .success(let filmDizisi):
                 if let filmDizisi = filmDizisi
                 {
-                    self.filmler=filmDizisi
+                    DispatchQueue.main.async {
+                        self.filmler=filmDizisi.map(FilmViewModal.init)
+                    }
                 }
-            //filmDizisi hata dönerse
+                //filmDizisi hata dönerse
             case .failure(let failure): print(failure)
                 
             }
@@ -34,7 +36,7 @@ class FilmListeViewModal: ObservableObject{
 
 struct FilmViewModal{
     
-    let film:[Film]
+    let film:Film
     
     var title:String{
         film.title
