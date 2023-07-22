@@ -30,3 +30,25 @@ class FilmListeViewModal: ObservableObject{
     }
     
 }
+
+
+struct FilmViewModal{
+    
+    let film:[Film]
+    
+    var title:String{
+        film.title
+    }
+    
+    var poster:String{
+        film.poster
+    }
+    
+    var year:String{
+        film.year
+    }
+    
+    var ımdbId:String{
+        film.imdbId
+    }
+}
