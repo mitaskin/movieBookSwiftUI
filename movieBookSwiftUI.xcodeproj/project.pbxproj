@@ -13,6 +13,7 @@
 		1E9364FC2A6A91C200CCB09A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E9364FB2A6A91C200CCB09A /* Preview Assets.xcassets */; };
 		1E9365072A6A949900CCB09A /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9365062A6A949900CCB09A /* Film.swift */; };
 		1E93650A2A6A99C100CCB09A /* DownloaderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9365092A6A99C100CCB09A /* DownloaderClient.swift */; };
+		1E93650D2A6C023800CCB09A /* FilmViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E93650C2A6C023800CCB09A /* FilmViewModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		1E9364FB2A6A91C200CCB09A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1E9365062A6A949900CCB09A /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		1E9365092A6A99C100CCB09A /* DownloaderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloaderClient.swift; sourceTree = "<group>"; };
+		1E93650C2A6C023800CCB09A /* FilmViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmViewModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		1E9365042A6A93C700CCB09A /* ViewModal */ = {
 			isa = PBXGroup;
 			children = (
+				1E93650C2A6C023800CCB09A /* FilmViewModal.swift */,
 			);
 			path = ViewModal;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				1E9364F72A6A91C100CCB09A /* ContentView.swift in Sources */,
 				1E9365072A6A949900CCB09A /* Film.swift in Sources */,
 				1E9364F52A6A91C100CCB09A /* movieBookSwiftUIApp.swift in Sources */,
+				1E93650D2A6C023800CCB09A /* FilmViewModal.swift in Sources */,
 				1E93650A2A6A99C100CCB09A /* DownloaderClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
