@@ -9,13 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            
+            Button(
+                action:
+                    {
+                        DownloaderClient().filmleriIndir(search: "Titanic")
+                        { (sonuc) in switch sonuc{
+                        case .success(let filmDizisi):print(filmDizisi)
+                        case .failure(let hata):print(hata.localizedDescription)
+                        }
+                            
+                        }
+                    },
+                label:
+                    {
+                        Text("Test Yap")
+                    }
+            )
+            
         }
-        .padding()
+        
     }
 }
 
