@@ -22,9 +22,13 @@ struct ContentView: View {
         NavigationView{
             VStack{
                 
-                TextField("Aramak istediğiniz Film", text: $aranacakFilm,onEditingChanged: { _ in}, onCommit: {
+                TextField("Aramak istediğiniz film",
+                          text: $aranacakFilm,
+                          onEditingChanged: { _ in},
+                          onCommit: {
                     self.filmListeViewModal.filmAramasiYap(filmIsmi: aranacakFilm)
-                }).padding()
+                }).padding().textFieldStyle(RoundedBorderTextFieldStyle())
+                
                 
                 List(filmListeViewModal.filmler, id: \.imdbId){
                     film in
