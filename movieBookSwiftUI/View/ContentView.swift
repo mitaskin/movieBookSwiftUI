@@ -8,29 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    
+    @ObservedObject var filmListeViewModal : FilmListeViewModal
+    
+    init() {
+        self.filmListeViewModal = FilmListeViewModal()
+        self.filmListeViewModal.filmAramasiYap(filmIsmi: "recep")
+    }
+    
     var body: some View {
-        
-        VStack {
-            
-            Button(
-                action:
-                    {
-                        DownloaderClient().filmleriIndir(search: "Titanic")
-                        { (sonuc) in switch sonuc{
-                        case .success(let filmDizisi):print(filmDizisi)
-                        case .failure(let hata):print(hata.localizedDescription)
-                        }
-                            
-                        }
-                    },
-                label:
-                    {
-                        Text("Test Yap")
-                    }
-            )
-            
+        List(filmListeViewModal.filmler, id: \.imdbId){
+            film in
+            Text(film.title)
         }
-        
     }
 }
 

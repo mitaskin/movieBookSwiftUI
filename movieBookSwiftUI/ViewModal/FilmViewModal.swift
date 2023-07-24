@@ -50,7 +50,7 @@ struct FilmViewModal{
         film.year
     }
     
-    var ımdbId:String{
+    var imdbId:String{
         film.imdbId
     }
 }
