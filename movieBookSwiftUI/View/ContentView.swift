@@ -20,7 +20,17 @@ struct ContentView: View {
     var body: some View {
         List(filmListeViewModal.filmler, id: \.imdbId){
             film in
-            Text(film.title)
+            HStack{
+                Image("loading")
+                    .resizable()
+                    .frame(width: 50, height: 50)
+                
+                VStack(alignment: .leading){
+                    Text(film.title).font(.title3).foregroundColor(.blue)
+                    Text(film.year).font(.title2).foregroundColor(.orange)
+                                            
+                }
+            }
         }
     }
 }
