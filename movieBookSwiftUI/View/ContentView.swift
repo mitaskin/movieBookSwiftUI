@@ -12,27 +12,32 @@ struct ContentView: View {
     
     @ObservedObject var filmListeViewModal : FilmListeViewModal
     
+    @State var aranacakFilm = " "
+    
     init() {
         self.filmListeViewModal = FilmListeViewModal()
-        self.filmListeViewModal.filmAramasiYap(filmIsmi: "gora")
     }
     
     var body: some View {
         NavigationView{
-            
-            List(filmListeViewModal.filmler, id: \.imdbId){
-                film in
-                HStack{
-                    
-                    OzelImage(url: film.poster).frame(width: 70, height: 110)
-                    
-                    VStack(alignment: .leading){
-                        Text(film.title).font(.title3).foregroundColor(.blue)
-                        Text(film.year).font(.title2).foregroundColor(.orange)
+            VStack{
+                
+                TextField("Aramak istediğiniz Film", text: $aranacakFilm,onEditingChanged: { _ in}, onCommit: {
+                    self.filmListeViewModal.filmAramasiYap(filmIsmi: aranacakFilm)
+                }).padding()
+                
+                List(filmListeViewModal.filmler, id: \.imdbId){
+                    film in
+                    HStack{
+                        OzelImage(url: film.poster).frame(width: 70, height: 110)
+                        VStack(alignment: .leading){
+                            Text(film.title).font(.title3).foregroundColor(.blue)
+                            Text(film.year).font(.title2).foregroundColor(.orange)
+                        }
                     }
-                }
-            }.navigationTitle(Text("Film Arşivi"))
-            
+                }.navigationTitle(Text("Film Arşivi"))
+                
+            }
         }
     }
 }
