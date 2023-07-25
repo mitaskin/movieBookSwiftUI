@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E90504D2A6FD3E500D2E705 /* FilmDetay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E90504C2A6FD3E500D2E705 /* FilmDetay.swift */; };
 		1E9364F52A6A91C100CCB09A /* movieBookSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9364F42A6A91C100CCB09A /* movieBookSwiftUIApp.swift */; };
 		1E9364F72A6A91C100CCB09A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9364F62A6A91C100CCB09A /* ContentView.swift */; };
 		1E9364F92A6A91C200CCB09A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E9364F82A6A91C200CCB09A /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E90504C2A6FD3E500D2E705 /* FilmDetay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetay.swift; sourceTree = "<group>"; };
 		1E9364F12A6A91C100CCB09A /* movieBookSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = movieBookSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9364F42A6A91C100CCB09A /* movieBookSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movieBookSwiftUIApp.swift; sourceTree = "<group>"; };
 		1E9364F62A6A91C100CCB09A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				1E9365062A6A949900CCB09A /* Film.swift */,
+				1E90504C2A6FD3E500D2E705 /* FilmDetay.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E9364F72A6A91C100CCB09A /* ContentView.swift in Sources */,
+				1E90504D2A6FD3E500D2E705 /* FilmDetay.swift in Sources */,
 				1E9365072A6A949900CCB09A /* Film.swift in Sources */,
 				1E9365112A6EBBD500CCB09A /* OzelImage.swift in Sources */,
 				1E9364F52A6A91C100CCB09A /* movieBookSwiftUIApp.swift in Sources */,
