@@ -21,7 +21,11 @@ class FilmDetayViewModal : ObservableObject {
             case .failure(let hata):
                 print(hata)
             case .success(let filmDetay):
-                self.filmDetayi = FilmDetaylariViewModal(detay: filmDetay)
+                DispatchQueue.main.async {
+                    self.filmDetayi = FilmDetaylariViewModal(detay: filmDetay)
+                    
+                }
+                
             }
         }
         
