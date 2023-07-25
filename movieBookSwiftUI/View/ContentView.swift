@@ -30,21 +30,24 @@ struct ContentView: View {
                         filmIsmi: aranacakFilm
                             .trimmingCharacters(in: .whitespacesAndNewlines)
                             .addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
-                            ?? aranacakFilm)
+                        ?? aranacakFilm)
                 }).padding().textFieldStyle(RoundedBorderTextFieldStyle())
                 
                 
                 List(filmListeViewModal.filmler, id: \.imdbId){
                     film in
-                    HStack{
-                        OzelImage(url: film.poster).frame(width: 70, height: 110)
-                        VStack(alignment: .leading){
-                            Text(film.title).font(.title3).foregroundColor(.blue)
-                            Text(film.year).font(.title2).foregroundColor(.orange)
+                    NavigationLink(destination: DetayView(imdbId:film.imdbId),
+                        label: {
+                            HStack{
+                                OzelImage(url: film.poster).frame(width: 70, height: 110)
+                                VStack(alignment: .leading){
+                                    Text(film.title).font(.title3).foregroundColor(.blue)
+                                    Text(film.year).font(.title2).foregroundColor(.orange)
+                                }
+                            }
                         }
-                    }
+                    )
                 }.navigationTitle(Text("Film Arşivi"))
-                
             }
         }
     }
