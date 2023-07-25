@@ -35,6 +35,37 @@ class DownloaderClient {
         }.resume()
     }
     
+    
+    func filmDetayiniIndir( imdbId : String, completion: @escaping (Result<FilmDetay,DowloaderError>) -> Void )
+    {
+        
+        guard let url = URL(string:"https://www.omdbapi.com/?i=\(imdbId)&apikey=befa1d0e") else
+        {
+            return completion(.failure(.yanlisUrl))
+        }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            guard let data = data, error == nil else
+            {
+                return completion(.failure(.veriGelmedi))
+            }
+            
+            guard let gelenFilmDetayi = try? JSONDecoder().decode(FilmDetay.self, from: data) else
+            {
+                return completion(.failure(.veriIslenemedi))
+            }
+            
+            completion(.success(gelenFilmDetayi))
+            
+        }.resume()
+        
+        
+    }
+    
+    
+    
+    
 }
 
 enum DowloaderError : Error{
