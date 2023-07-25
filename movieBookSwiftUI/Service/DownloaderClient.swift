@@ -12,8 +12,7 @@ class DownloaderClient {
     func filmleriIndir(search : String, completion: @escaping (Result<[Film]?,DowloaderError>) -> Void)
     {
         
-        
-        guard let url = URL(string: "https://www.omdbapi.com/?s=\(search)&apikey=befa1d0e") else
+        guard let url = URL(string:"https://www.omdbapi.com/?s=\(search)&apikey=befa1d0e") else
         {
             return completion(.failure(.yanlisUrl))
         }

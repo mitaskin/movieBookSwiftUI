@@ -12,7 +12,7 @@ struct ContentView: View {
     
     @ObservedObject var filmListeViewModal : FilmListeViewModal
     
-    @State var aranacakFilm = " "
+    @State var aranacakFilm = ""
     
     init() {
         self.filmListeViewModal = FilmListeViewModal()
@@ -26,7 +26,11 @@ struct ContentView: View {
                           text: $aranacakFilm,
                           onEditingChanged: { _ in},
                           onCommit: {
-                    self.filmListeViewModal.filmAramasiYap(filmIsmi: aranacakFilm)
+                    self.filmListeViewModal.filmAramasiYap(
+                        filmIsmi: aranacakFilm
+                            .trimmingCharacters(in: .whitespacesAndNewlines)
+                            .addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+                            ?? aranacakFilm)
                 }).padding().textFieldStyle(RoundedBorderTextFieldStyle())
                 
                 
